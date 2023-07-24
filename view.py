@@ -1,12 +1,12 @@
-from database import *
+# from database import *
 
 def input_number():
     answer= int(input("Выберете действие:\n1-записать нового пользователя\n2-вывести телефонный справочник\n3-найти\n4-изменить\n5-удалить\n0-закончить работу\n"))
     return answer
 
-def add_name_and_phone():
+def add_name_phone():
     id = '1'
-    with open("telefon.txt", "a", encoding="UTF-8") as file:
+    with open("telefon.txt", "r", encoding="UTF-8") as file:
         lst = file.readlines()
         lst.sort(key= lambda x: int(x.split(',')[0]))
         for row in lst:
@@ -26,7 +26,7 @@ def input_want_to_find():
     char = input("Введите слово поиска:\n")
     return char
 
-def change_name_and_phone():
+def change_name_phone():
     name = input('Введите имя: ')
     surname = input('Ввелите фамилию: ')
     tel = input('Введите номер телефона: ')
