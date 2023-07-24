@@ -1,11 +1,10 @@
-from database import *
+
 from view import *
+from database import *
 
 def main():
     while True:
         num = input_number()
-        if num == 0:
-            break
         if num == 1:
             res = add_name_and_phone()
             write_name(res)
@@ -22,5 +21,7 @@ def main():
         if num == 5:
             delete_smth_in_phone_book()
             print('Успешно удалено\n')
+        if num == 0:
+            break
 
 main()

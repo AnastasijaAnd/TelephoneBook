@@ -6,7 +6,7 @@ def input_number():
 
 def add_name_and_phone():
     id = '1'
-    with open("telefon.txt", "r", encoding="UTF-8") as file:
+    with open("telefon.txt", "a", encoding="UTF-8") as file:
         lst = file.readlines()
         lst.sort(key= lambda x: int(x.split(',')[0]))
         for row in lst:
